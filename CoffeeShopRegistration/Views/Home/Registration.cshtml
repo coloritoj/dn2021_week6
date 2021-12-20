@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Registration</h1>
+
+<i>Note: When creating your password, make sure it is at least 8 characters long and contains at least one of the following special characters: ! # %</i><br /><br />
+
+<form method="post" action="/home/registrationconfirmation">
+    First Name <input type="text" name="first" /><br />
+    Last Name <input type="text" name="last" /><br />
+    Email <input type="email" name="email" /><br />
+    Password <input type="password" name="password"<br /><br />
+    <input type="submit" value="Register!" />
+</form>
