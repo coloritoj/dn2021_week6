@@ -37,6 +37,11 @@ namespace MVCDemo1.Controllers
             return View();
         }
 
+        // [HttpGet] or [HttpPost] to make them accept one or the other. Put right above the FormResponse. If you don't put either, it accepts both.
+        // By default, all links you click are Gets. Posts really only come into play when you're entering data.
+        // ... Get put the form info in the URL and work it from there
+        // ... Post means the form data goes through the form data into the function
+        // ... The majority of what happens on a website is a Get.
         public IActionResult FormResponse(string first, string last, string pword)
         {
             if (first == "Sally" || first == "Fred")

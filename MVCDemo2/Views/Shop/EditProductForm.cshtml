@@ -1,0 +1,13 @@
+﻿@model Item
+<!--Remember, we need to set model equal to the TYPE --> 
+
+<h1>Edit Product</h1>
+
+<form method="post" action="/shop/editproduct">
+    Id: @Model.id<br /> <!--Model needs to be capitalized. This first Id: is just indicating to the user that you can't change the Id. But we still need to send it back, so that's why we put the hidden field below.-->
+    <input type="hidden" name="id" value="@Model.id" /> <!--I'm not totally sure what this is doing here, but it makes the edit work'. OK It's basically putting in a hidden field that can't be changed (because it's hidden). The reason we do this is because we need to send the ID back'-->
+    Name: <input type="text" name="Name" value="@Model.Name"/><br /> <!--The VALUE means it's pre-populating everything'-->
+    Price: <input type="text" name="Price" value="@Model.Price"/><br />
+    <input type="submit" value="Save" class="btn btn-primary"/>
+    <a href="/" class="btn btn-danger">Cancel</a>
+</form>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "AddProductForm";
+}
+
+<h1>Enter a New Product</h1>
+
+<!--Generally you want all forms to be posts-->
+<form method="post" action="/shop/addproduct">
+    id: <input type="text" name="id" /><br /> <!--When entering the fields, you want to match the case-->
+    Name: <input type="text" name="Name" /><br /> <!--When entering the fields, you want to match the case-->
+    Price: <input type="text" name="Price" /><br /> <!--When entering the fields, you want to match the case-->
+    <input type="submit" value="Save" />
+</form>
+
